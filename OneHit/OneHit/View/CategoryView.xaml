@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="OneHit.View.CategoryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:OneHit.ViewModel"
+             xmlns:vw="clr-namespace:OneHit.View"
+             mc:Ignorable="d"
+             BorderThickness="2" Margin="5" Padding="0" d:DesignHeight="178" d:DesignWidth="268" MinWidth="120" 
+             AllowDrop="True" 
+             Drop="UserControl_Drop" 
+             DragOver="UserControl_DragOver"
+			 DragLeave="UserControl_DragLeave"
+             DragEnter="UserControl_DragEnter">
+    
+    <UserControl.Resources>
+        
+        <DataTemplate DataType="{x:Type vm:ShortcutViewModel}">
+            <vw:ShortcutView />
+        </DataTemplate>
+        
+        <Style x:Key="HeaderLabelStyle">
+            <Setter Property="TextBlock.Background" Value="LightGray" />
+            <Setter Property="TextBlock.FontSize" Value="20" />
+            <Setter Property="TextBlock.Padding" Value="4" />
+        </Style>
+        
+        <ContextMenu x:Key="LabelContextMenu">
+            <MenuItem Header="Add Shortcut" Command="{Binding AddShortcutCommand}" />
+            <MenuItem Header="Delete Folder" Command="{Binding DeleteFolderCommand}" />
+            <MenuItem Header="Edit Folder" Command="{Binding FolderEditCommand}" />
+            <!--
+            COMMENT: "Save as Template" is disabled until it is finalized the process flow.
+            <Separator/>
+            <MenuItem Header="Save as Template" Command="{Binding SaveAsTemplateCommand}" IsEnabled="{Binding IsTemplateSavingEnabled}" />
+            -->
+        </ContextMenu>
+
+        <Storyboard x:Key="HeaderEnterAnim">
+            <ColorAnimation Storyboard.TargetName="_fore" Storyboard.TargetProperty="Color" To="White" Duration="00:00:0.1" />
+        </Storyboard>
+
+        <Storyboard x:Key="HeaderExitAnim">
+            <ColorAnimation Storyboard.TargetName="_fore" Storyboard.TargetProperty="Color" To="Silver"  Duration="00:00:0.1"/>
+        </Storyboard>
+        
+    </UserControl.Resources>
+
+    <UserControl.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="Add Shortcut" Command="{Binding AddShortcutCommand}" />
+        </ContextMenu>
+    </UserControl.ContextMenu>
+
+    <Grid Margin="5">
+        <TextBlock Text="{Binding Path=Label}" Height="30" Name="lblTitle" 
+			   VerticalAlignment="Top" FontSize="14" FontWeight="Bold"
+			  FontFamily="Segoe UI" Padding="5,4,0,0" ContextMenu="{StaticResource LabelContextMenu}" Background="#FF2B1C1C" MouseLeftButtonDown="lblTitle_MouseLeftButtonDown">
+            
+            <TextBlock.Foreground>
+                    <SolidColorBrush Color="#FFD4D4D4" x:Name="_fore" />
+            </TextBlock.Foreground>
+            
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="UserControl.MouseEnter">
+                    <BeginStoryboard Storyboard="{StaticResource HeaderEnterAnim}"/>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="UserControl.MouseLeave">
+                    <BeginStoryboard Storyboard="{StaticResource HeaderExitAnim}"/>
+                </EventTrigger>
+            </TextBlock.Triggers>
+            
+        </TextBlock>
+        <ItemsControl Margin="0,30,0,-1" Name="listBox1" 
+                      ItemsSource="{Binding Path=ShortcutViewModels, Mode=OneWay}"
+                      PreviewMouseLeftButtonDown="listBox1_PreviewMouseLeftButtonDown"
+                      PreviewMouseLeftButtonUp="listBox1_PreviewMouseLeftButtonUp"
+                      PreviewMouseMove="listBox1_PreviewMouseMove"   					  
+                      AllowDrop="True"
+                      BorderThickness="0,1,0,0"
+                      BorderBrush="Black">            
+            
+        </ItemsControl>
+        <Image Height="10" HorizontalAlignment="Right" Margin="0,8,8,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="10" Source="{Binding Path=CollapseExpandImage, Mode=OneWay}"  MouseLeftButtonDown="lblTitle_MouseLeftButtonDown"/>
+    </Grid>
+
+</UserControl>

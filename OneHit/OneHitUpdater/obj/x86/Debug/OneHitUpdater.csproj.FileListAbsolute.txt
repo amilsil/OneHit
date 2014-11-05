@@ -1,0 +1,16 @@
+D:\WORK\PROJECTS\OneHit\Deploy\OneHitUpdater.exe
+D:\WORK\PROJECTS\OneHit\Deploy\OneHitUpdater.pdb
+D:\WORK\PROJECTS\OneHit\OneHitUpdater\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\WORK\PROJECTS\OneHit\OneHitUpdater\obj\x86\Debug\OneHitUpdater.Properties.Resources.resources
+D:\WORK\PROJECTS\OneHit\OneHitUpdater\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\WORK\PROJECTS\OneHit\OneHitUpdater\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\WORK\PROJECTS\OneHit\OneHitUpdater\obj\x86\Debug\OneHitUpdater.exe
+D:\WORK\PROJECTS\OneHit\OneHitUpdater\obj\x86\Debug\OneHitUpdater.pdb
+D:\Dropbox\Projects\OneHit\Deploy\OneHitUpdater.exe
+D:\Dropbox\Projects\OneHit\Deploy\OneHitUpdater.pdb
+D:\Dropbox\Projects\OneHit\OneHitUpdater\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Dropbox\Projects\OneHit\OneHitUpdater\obj\x86\Debug\OneHitUpdater.Properties.Resources.resources
+D:\Dropbox\Projects\OneHit\OneHitUpdater\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Dropbox\Projects\OneHit\OneHitUpdater\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Dropbox\Projects\OneHit\OneHitUpdater\obj\x86\Debug\OneHitUpdater.exe
+D:\Dropbox\Projects\OneHit\OneHitUpdater\obj\x86\Debug\OneHitUpdater.pdb

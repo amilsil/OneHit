@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OneHit.DataAccess.ShortcutRepository">
+    <Position X="6.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAQA0AAAEAAAAgAQFQAAAEAAwEAAAAAAAAg=</HashCode>
+      <FileName>DataAccess\ShortcutRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OneHit.DataAccess.FileSystemUtility">
+    <Position X="3.25" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAEIAAAAAAAAAAAAABAAECA=</HashCode>
+      <FileName>DataAccess\FileSystemUtility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OneHit.Util.ResourceUpdate.UpdatableResource">
+    <Position X="0.75" Y="6.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAABAAAAAAAAAAAAAQAAAAAAAAAAAACAAAgAAA=</HashCode>
+      <FileName>Util\ResourceUpdate\UpdatableResource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OneHit.Util.ResourceUpdate.TemplateResource">
+    <Position X="1" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Util\ResourceUpdate\TemplateResource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OneHit.Model.XMLContext">
+    <Position X="3.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACCAQBAAAAAAAAAEAAAAACAgAAAgAAAAAQAAAAIEAAQ=</HashCode>
+      <FileName>Model\XMLContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OneHit.Model.ApplicationContext">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgAAAICAAAAAIAAAQBEBAAAAAAAAAAAAQAgAEAAAA=</HashCode>
+      <FileName>Model\ApplicationContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

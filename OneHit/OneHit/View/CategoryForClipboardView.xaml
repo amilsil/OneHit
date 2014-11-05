@@ -1,0 +1,19 @@
+﻿<Window x:Class="OneHit.View.CategoryForClipboardView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Select card to add hyperlink to" Height="200" Width="360" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True" WindowStartupLocation="CenterScreen" Icon="/OneHit;component/Icon.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="35" />
+            <RowDefinition Height="55" />
+            <RowDefinition Height="35" />
+        </Grid.RowDefinitions>
+        <ComboBox Height="25" HorizontalAlignment="Left" Margin="60,10,0,0" Name="cbCards" VerticalAlignment="Top" Width="275" ItemsSource="{Binding Path=CategoryNames}" SelectedIndex="{Binding Path=SelectedIndex}"/>
+        <Label Content="Card" Height="25" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label1" VerticalAlignment="Top" Width="40" />
+        <CheckBox Content="Save this as the default card for clipboard hyperlinks" Grid.Row="1" Height="19" HorizontalAlignment="Left" Margin="10,10,0,0" Name="chkDefault" VerticalAlignment="Top" Width="334" IsChecked="{Binding Path=IsDefaultCategoryForClipboard}" Grid.RowSpan="2" FontStretch="ExtraExpanded" />
+        <TextBlock Text="You can change this later by Right Click -> Settings -> Clipboard on the OneHit Workspace." Margin="10" Grid.Row="2" TextWrapping="WrapWithOverflow" Foreground="Gray" />
+        <Button Content="OK" Grid.Row="3" Height="25" Margin="0,10,10,0" Name="btnOK" VerticalAlignment="Top" IsDefault="True" Click="btnOK_Click" IsEnabled="{Binding Path=OK_Enabled}" HorizontalAlignment="Right" Width="80" />
+        <Button Content="Cancel" Grid.Row="3" Height="25" HorizontalAlignment="Right" Margin="0,10,100,0" Name="btnCancel" VerticalAlignment="Top" Width="80" IsCancel="True" Click="btnCancel_Click" />        
+    </Grid>
+</Window>

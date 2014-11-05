@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="OneHit.View.ShortcutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="231">
+    
+    <UserControl.Background>
+        <SolidColorBrush Opacity="0.2" Color="Black" x:Name="_UserControlBack"/>
+    </UserControl.Background>
+    
+	<UserControl.Resources>
+        
+        <ContextMenu x:Key="ShortcutContextMenu">
+            <MenuItem Header="Delete" Command="{Binding DeleteShortcutCommand}" />
+            <MenuItem Header="Edit" Command="{Binding ShortcutEditCommand}" />
+            <Separator />
+            <MenuItem Header="Copy Path" Command="{Binding Path=CopyPathCommand}"/>
+        </ContextMenu>
+		
+        <Storyboard x:Key="buttonAnim">            
+            <ColorAnimation Storyboard.TargetName="_fore" Storyboard.TargetProperty="Color" To="White" Duration="00:00:0.1" />
+            <ColorAnimation Storyboard.TargetName="_back" Storyboard.TargetProperty="Color" To="#252525" Duration="00:00:0" />
+        </Storyboard>
+		
+        <Storyboard x:Key="buttonExitAnim">
+            <ColorAnimation Storyboard.TargetName="_fore" Storyboard.TargetProperty="Color" To="#d5d5d5"  Duration="00:00:0.1" />
+            <ColorAnimation Storyboard.TargetName="_back" Storyboard.TargetProperty="Color" To="Transparent" Duration="00:00:0" />
+        </Storyboard>
+
+        <ControlTemplate x:Key="LinkButton" TargetType="Button">
+			<TextBlock Text="{TemplateBinding Content}" TextAlignment="Left" Padding="2" TextTrimming="CharacterEllipsis">
+				<TextBlock.Foreground>
+                    <SolidColorBrush Color="#d5d5d5" x:Name="_fore" />
+                </TextBlock.Foreground>
+                <TextBlock.Background>
+                    <SolidColorBrush Color="Transparent" x:Name="_back" />
+                </TextBlock.Background>
+				
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="UserControl.MouseEnter">
+                        <BeginStoryboard Storyboard="{StaticResource buttonAnim}"/>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="UserControl.MouseLeave">
+                        <BeginStoryboard Storyboard="{StaticResource buttonExitAnim}"/>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+        </ControlTemplate>
+        
+    </UserControl.Resources>
+    
+    <Grid Width="220" Height="26"           
+          AllowDrop="True">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25" />
+            <ColumnDefinition Width="154*" />
+        </Grid.ColumnDefinitions>
+        
+        <Image Height="16" Width="16" Source="{Binding Path=IconSource}" Margin="5,3,2,4">
+            <Image.ToolTip>
+                <TextBlock FontWeight="Bold" Text="{Binding Path=Path}" />
+            </Image.ToolTip>
+        </Image>
+        <Button Grid.Column="1" Content="{Binding Path=Label}" 
+                Command="{Binding Path=OpenShortcutCommand}"      
+				ContextMenu="{StaticResource ShortcutContextMenu}"
+                Template="{StaticResource LinkButton}"
+                Height="22" FontSize="12" Margin="0,0,0,2" Background="{x:Null}">
+            <Button.ToolTip>
+                <TextBlock FontWeight="Bold" Text="{Binding Path=Label}" />
+            </Button.ToolTip>
+        </Button>
+	</Grid>
+</UserControl>
