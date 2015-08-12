@@ -1,9 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneHit", "OneHit\OneHit.csproj", "{02183656-D13F-40B8-BF77-DE8FDA4299E4}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "OneHitInstaller", "OneHitInstaller\OneHitInstaller.vdproj", "{915D942F-0461-45FF-BA56-5D031D8C14DA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneHitUpdater", "OneHitUpdater\OneHitUpdater.csproj", "{A356D0FA-68E3-43E2-AB63-BB11A91553EB}"
 EndProject
@@ -17,8 +17,6 @@ Global
 		{02183656-D13F-40B8-BF77-DE8FDA4299E4}.Debug|x86.Build.0 = Debug|x86
 		{02183656-D13F-40B8-BF77-DE8FDA4299E4}.Release|x86.ActiveCfg = Release|x86
 		{02183656-D13F-40B8-BF77-DE8FDA4299E4}.Release|x86.Build.0 = Release|x86
-		{915D942F-0461-45FF-BA56-5D031D8C14DA}.Debug|x86.ActiveCfg = Debug
-		{915D942F-0461-45FF-BA56-5D031D8C14DA}.Release|x86.ActiveCfg = Release
 		{A356D0FA-68E3-43E2-AB63-BB11A91553EB}.Debug|x86.ActiveCfg = Debug|x86
 		{A356D0FA-68E3-43E2-AB63-BB11A91553EB}.Debug|x86.Build.0 = Debug|x86
 		{A356D0FA-68E3-43E2-AB63-BB11A91553EB}.Release|x86.ActiveCfg = Release|x86

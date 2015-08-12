@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Dropbox\Projects\OneHit\OneHit\obj\x86\Release\
+C:\Users\akumarasinghe\Source\Repos\OneHit\OneHit\OneHit\obj\x86\Release\
 OneHit
 none
 false
 TRACE
-D:\Dropbox\Projects\OneHit\OneHit\App.xaml
+C:\Users\akumarasinghe\Source\Repos\OneHit\OneHit\OneHit\App.xaml
 11-1650379771
 
-49880553359
+49432322684
 14-629149121
 MainWindow.xaml;View\CategoryForClipboardView.xaml;View\CategoryView.xaml;View\FilteredShortcutView.xaml;View\FolderFromTemplateView.xaml;View\FolderPropertiesView.xaml;View\NoteView.xaml;View\QuickView.xaml;View\SettingsView.xaml;View\ShortcutPropertiesView.xaml;View\ShortcutView.xaml;
 
-False
+True
 
